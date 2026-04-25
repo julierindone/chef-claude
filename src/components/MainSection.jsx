@@ -20,10 +20,6 @@ export default function Main() {
 
 	const [recipeShown, setRecipeShown] = React.useState(false)
 
-	const ingredientsListItems = ingredients.map(ingredient => (
-		<li key={ingredient}>{ingredient}</li>
-	))
-
 	function addIngredient(formData) {
 		const newIngredient = formData.get("ingredient")
 		setIngredients(prevIngredients => [...prevIngredients, newIngredient])
@@ -47,13 +43,9 @@ export default function Main() {
 			{/* TODO: Ready for Recipe div might be better as a different component. */}
 			{ingredients.length > 0 &&
 				<IngredientsList
-					ingredientsListItems={ingredientsListItems}
 					ingredients={ingredients}
 					toggleRecipeShown={toggleRecipeShown}
 				/>}
-
-
-
 			{recipeShown && <ClaudeRecipe />}
 		</main>
 	)
