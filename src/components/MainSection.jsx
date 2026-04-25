@@ -3,12 +3,6 @@ import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
 import { getRecipeFromChefClaude } from "../ai";
 
-/** Challenge: Get a recipe from the AI!
- * Using the `getRecipeFromChefClaude` function, make it so that when the user
- * clicks "Get a recipe", the text response from the AI is displayed
- * in the <ClaudeRecipe> component.
- * For now, just have it render the raw markdown that the AI returns.   */
-
 export default function Main() {
 	const [ingredients, setIngredients] = React.useState([])
 
